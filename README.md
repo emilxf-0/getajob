@@ -11,34 +11,34 @@ Aight, so the beauty of all this is that Jekyll utilizes Liquid, which is a temp
 I've added the necessary setup for tailwind, some basic templating for a start page and a CV.
 
 ### Basic Setup
-1. Download the zip-file, you'll be setting up your own repo later. 
-2. Download and install [NVM Windows](https://github.com/coreybutler/nvm-windows/releases)
-3. After NVM is installed open command prompt and run.
+1. Click "Use this template" in the top right corner here on Github.
+2. Name the repo yourusername.github.io to make set up github pages (it has to be public).
+   
+### Install dependencies
+1. Download and install [NVM Windows](https://github.com/coreybutler/nvm-windows/releases)
+
+2. After NVM is installed open command prompt and run.
 
    ```nvm install node```
-   
-4. If you don't have Ruby installed [download it here](https://rubyinstaller.org/downloads/).
-5. Install Jekyll and Bundler.
+
+3. If you don't have Ruby installed [download it here](https://rubyinstaller.org/downloads/).
+
+4. Install Jekyll and Bundler.
 
    ```gem install jekyll bundler```
-   
-6. Create your github pages repo by creating a new repo and name it yourusername.github.io.
-7. Clone the repo to your computer.
-8. Open the getajob zip and copy all the content into your new repo.
 
-### Install dependencies
-1. Install tailwindcss
+5.  Install tailwindcss
 
    ```
    npm install -D tailwindcss 
    npx tailwindcss init
    ```
 
-3. Install tailwindcss typography
+6. Install tailwindcss typography
 
    ```npm install -D @tailwindcss/typography```
 
-4. Install rimraf
+7. Install rimraf
 
    ```npm i rimraf```
 
