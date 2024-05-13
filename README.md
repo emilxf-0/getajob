@@ -28,14 +28,17 @@ I've added the necessary setup for tailwind, some basic templating for a start p
 
 ### Install dependencies
 1. Install tailwindcss
-   ```npm install -D tailwindcss 
-   npx tailwindcss init```
 
-2. Install tailwindcss typography
+   ```
+   npm install -D tailwindcss 
+   npx tailwindcss init
+   ```
+
+3. Install tailwindcss typography
 
    ```npm install -D @tailwindcss/typography```
 
-3. Install rimraf
+4. Install rimraf
 
    ```npm i rimraf```
 
