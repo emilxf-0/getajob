@@ -1,0 +1,24 @@
+# Site configuration
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Environment normalization
+.bundle/
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
+
+# macOS files
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Build output
+assets/css/styles.css
+
+# Jekyll metadata file
+.jekyll-metadata

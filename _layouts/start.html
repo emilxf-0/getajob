@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body class="bg-white text-zinc-950">
+
+    {% include header.html %}
+
+    <main>
+        <!-- Main content goes here -->
+        {% include intro.html %}        
+
+        <section class=" text-white py-10 px-4 lg:px-8" x-data="{ filter: 'all' }">
+            <!-- Filter buttons -->
+            <div class="mx-auto my-10 max-w-5xl">
+                {% assign unique_tags = site.data.projects | map: 'tags' | flatten | uniq %}
+                <button class="bg-zinc-950 hover:bg-gray-400 focus:bg-gray-100 focus:ring-1 focus ring-zinc-950 focus:text-zinc-950 hover:scale-105 p-2 md:p-4 my-4 text-white font-semibold"
+                    @click="filter = 'all'">All</button>
+                {% for tag in unique_tags %}
+                <button class="bg-zinc-950 hover:bg-gray-400 focus:bg-gray-100 focus:ring-1 focus ring-zinc-950 focus:text-zinc-950 hover:scale-105 p-2 md:p-4 my-4 text-white font-semibold"
+                    @click="filter = '{{ tag }}'">{{ tag }}</button>
+                {% endfor %}
+            </div>
+
+            <!-- Project Display -->
+            <div class="max-w-5xl mx-auto pt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {% for project in site.data.projects %}
+                <div x-show="filter === 'all' || ['{{ project.tags | join: "', '" }}'].includes(filter)"
+                    x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-95"
+                    x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300"
+                    x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
+
+                    {% include popout.html project=project %}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+   {% include footer.html %}
+</body>
+
+</html>

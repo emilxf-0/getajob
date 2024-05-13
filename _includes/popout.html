@@ -1,0 +1,46 @@
+<div x-data="{open:false}" x-cloak>
+    <div @click="open = true" 
+        class="group bg-cover rounded-md transition ease-out duration-300 hover:scale-105">
+        
+            <div
+                class="rounded-t-md bg-[url('{{project.img}}')] bg-center bg-cover md:bg-zinc-950! md:group-hover:bg-gradient-to-r from-zinc-950 to-zinc-900">
+                <div class="rounded-t-md bg-opacity-30 bg-black bg-cover md:bg-opacity-100 px-8 py-4">
+                    <h2 class="text-lg md:text-xl font-semibold">{{project.title}}</h2>
+                    <p class="mt-2 text-xs uppercase font-bold">{{project.tags}}</p>
+
+                </div>
+    
+            </div>
+            
+            <img class="rounded-b-md hidden md:block aspect-video" src="{{project.img}}" alt="{{project.img}}">    
+    
+    </div>
+
+    <!-- Popout Background -->
+    <div x-show="open"
+        class="transition-opacity ease-out fixed duration-500 backdrop-blur-sm inset-0 bg-black bg-opacity-50 z-10"
+         @click="open = false" x-transition:enter="ease-out duration-300"
+        x-transition:enter-start="opacity-0" 
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="ease-in duration-300" 
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"> 
+    </div>
+   
+    <div x-show="open" x-cloak
+        class="rounded-lg fixed top-10 bottom-10 z-20 left-1/2 transform -translate-x-1/2 w-full md:w-1/2 overflow-y-auto max-h-svh bg-white p-8"
+        x-transition:enter="ease-out duration-300" 
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100" 
+        x-transition:leave="ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100" 
+        x-transition:leave-end="opacity-0 scale-95">
+
+        <button @click="open = false" class="absolute top-0 right-0 m-4 text-slate-900">&times;</button>
+
+        {% assign markdown_file = site.projects | where: "path", project.file | first %}
+        <div class="prose overflow-y-auto">
+            {{ markdown_file.content | markdownify }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<section class="text-zinc-950 mx-auto py-4 px-4 md:mb-20 md:mt-20  lg:px-8">
+    <div class="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-8">
+        <div class="col-span-1 order-last md:order-first md:col-span-4">
+            {% assign markdown_file = site.mainpages | where: "path", "_mainpages/intro.md" | first %}
+            <div>
+                {{ markdown_file.content | markdownify }}
+            </div>
+        </div>
+        <div class="mx-auto mt-6 mb-12 col-span-1 content-center order-first md:order-last md:col-span-4">
+            <img class="block w-1/2 md:w-48 h-auto mx-auto rounded-full" src="https://via.placeholder.com/300x300" alt="Placeholder image" width="150">
+        </div>
+    </div>
+</section>

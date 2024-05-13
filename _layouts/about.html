@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   {% include head.html %}
+</head>
+
+{% include header.html %}
+
+<body class="bg-white text-zinc-950">
+
+    
+    <section class=" text-white mx-0 py-20 sm:px-6 lg:px-8">
+        <div class="mx-auto top-10 bottom-10 py-20 bg-white grid grid-cols-1 md:grid-cols-3">
+            <div class="mb-9 md:col-span-2">
+                {% assign markdown_file = site.mainpages | where: "path", "_mainpages/about.md" | first %}
+                <div class="mx-auto prose px-5">
+                    {{ markdown_file.content | markdownify }}
+                </div>
+            </div>
+            <div class="mx-auto col-span-1 bg-slate-200">
+                {% assign markdown_file = site.mainpages | where: "path", "_mainpages/skills.md" | first %}
+                <div class="mx-auto prose px-5 py-9">
+                    {{ markdown_file.content | markdownify }}
+                </div>
+            </div>
+        </div>
+    </section>
+        {% include footer.html %}
+
+</body>

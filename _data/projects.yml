@@ -1,0 +1,12 @@
+- id: project-1
+  title: Project 1
+  img: 'https://via.placeholder.com/1440x810'
+  tags: ["C# ", "Unity ", "Game Development "]
+  file: "_projects/project1.md"
+
+- id: project-2
+  title: Project 2
+  img: 'https://via.placeholder.com/1440x810'
+  tags: ["C++ ", "Unreal ", "Game Development "]
+  file: "_projects/project2.md"
+

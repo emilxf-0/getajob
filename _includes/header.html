@@ -1,0 +1,26 @@
+<header class="sticky top-0 backdrop-blur text-zinc-950 body-font shadow w-full" x-data="{ open: false }">
+    <div class="mx-auto max-w-6xl grid grid-cols-8 pt-6 pb-4">
+        <div class="max-w-5xl mx-auto w-full col-span-6">
+            <!-- Logo and Branding -->
+            <a href="index.html" class="title-font font-semibold text-zinc-950 p-3 mb-0 block">
+                <span class="text-base">My Portfolio</span>
+            </a>
+        </div>
+
+        <div class="mx-auto w-full col-span-2">
+                <!-- Hamburger Menu Button -->
+            <button @click="open = !open" class="text-zinc-950 block p-3 hover:bg-gray-900 rounded md:hidden ml-auto hover:text-white outline-none z-50" id="menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <nav class="mx-auto text-pretty md:block w-full p-3" :class="{'fixed inset-0 flex flex-col items-center justify-center z-20 bg-gray-300': open, 'hidden': !open}">
+                <button @click="open = false" class="absolute top-0 right-0 m-4 text-zinc-950" :class="{'hidden': !open}">&times;</button>
+                <a href="index.html" class="text-zinc-950 font-semibold my-2 px-4 py-2 hover:bg-gray-200">Home</a>
+                <a href="about.html" class="text-zinc-950 font-semibold my-2 px-4 py-2 hover:bg-gray-200">About</a>
+            </nav>
+        </div>
+       
+    </div>
+</header>
