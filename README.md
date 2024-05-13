@@ -28,18 +28,16 @@ I've added the necessary setup for tailwind, some basic templating for a start p
 
 ### Install dependencies
 1. Install tailwindcss
-
-```npm install -D tailwindcss
-npx tailwindcss init```
+   ```npm install -D tailwindcss 
+   npx tailwindcss init```
 
 2. Install tailwindcss typography
 
-```npm install -D @tailwindcss/typography```
+   ```npm install -D @tailwindcss/typography```
 
 3. Install rimraf
 
-```npm i rimraf```
-
+   ```npm i rimraf```
 
 ### Build the site
 1. To build and run your site you just open a command prompt and type
