@@ -13,6 +13,7 @@ I've added the necessary setup for tailwind, some basic templating for a start p
 ### Basic Setup
 1. Click "Use this template" in the top right corner here on Github.
 2. Name the repo yourusername.github.io to make set up github pages (it has to be public).
+3. Copy the repo to your computer (I strongly recommend having something like a `C:\dev` folder where you put all your repo's. It'll _massively_ help with organizing your stuff and navigating through the console). 
    
 ### Install dependencies
 1. Download and install [NVM Windows](https://github.com/coreybutler/nvm-windows/releases)
@@ -21,13 +22,15 @@ I've added the necessary setup for tailwind, some basic templating for a start p
 
    ```nvm install node```
 
-3. If you don't have Ruby installed [download it here](https://rubyinstaller.org/downloads/).
+3. Navigate to your project folder by using `cd path/to/your/folder`
 
-4. Install Jekyll and Bundler.
+4. If you don't have Ruby installed [download it here](https://rubyinstaller.org/downloads/).
+
+5. Install Jekyll and Bundler.
 
    ```gem install jekyll bundler```
 
-5.  Install tailwindcss
+6.  Install tailwindcss
 
    ```
    npm install -D tailwindcss 
@@ -43,6 +46,6 @@ I've added the necessary setup for tailwind, some basic templating for a start p
    ```npm i rimraf```
 
 ### Build the site
-1. To build and run your site you just open a command prompt, navigate to your project folder by using `cd path/to/your/folder` and type
+1. To build and run your site you just open a command prompt and type
 
    ```npm run serve```
