@@ -43,6 +43,6 @@ I've added the necessary setup for tailwind, some basic templating for a start p
    ```npm i rimraf```
 
 ### Build the site
-1. To build and run your site you just open a command prompt and type
+1. To build and run your site you just open a command prompt, navigate to your project folder by using `cd path/to/your/folder` and type
 
    ```npm run serve```
